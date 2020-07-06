@@ -17,10 +17,10 @@ repositories {
         url = uri('http://repo.maven.apache.org/maven2')
     }
 }
-
 dependencies {
     testImplementation 'junit:junit:3.8.1'
     compileOnly 'org.spongepowered:spongeapi:7.2.0'
+    implementation files('libs/Pixelmon.jar')
 }
 
 group = 'com.gmail.ak1cec0ld.plugins.spongeexample'
