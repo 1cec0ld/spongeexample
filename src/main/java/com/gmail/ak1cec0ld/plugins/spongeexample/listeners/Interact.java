@@ -39,6 +39,12 @@ public class Interact {
         //if(db.dbContains(playerCause.get().getUniqueId().toString()))return;
         //db.dbInsert(playerCause.get().getUniqueId().toString());
 
+        if(spongePlayer.supports(SpongeExample.KEY)){
+            instance.getLogger().info("Supported");
+        } else {
+            instance.getLogger().info("Not Supported");
+        }
+
         DataTransactionResult result = spongePlayer.offer(SpongeExample.KEY, "kanto");
 
         instance.getLogger().info(result.toString());

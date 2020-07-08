@@ -1,12 +1,15 @@
 package com.gmail.ak1cec0ld.plugins.spongeexample;
 
 import com.gmail.ak1cec0ld.plugins.spongeexample.listeners.Interact;
+import com.gmail.ak1cec0ld.plugins.spongeexample.storage.UsageData;
 import com.google.inject.Inject;
 import org.slf4j.Logger;
 import org.spongepowered.api.data.DataQuery;
+import org.spongepowered.api.data.DataRegistration;
 import org.spongepowered.api.data.key.Key;
 import org.spongepowered.api.data.value.mutable.Value;
 import org.spongepowered.api.event.Listener;
+import org.spongepowered.api.event.game.GameRegistryEvent;
 import org.spongepowered.api.event.game.state.GamePreInitializationEvent;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.plugin.Plugin;
@@ -39,6 +42,17 @@ public class SpongeExample {
                 .type(TypeTokens.STRING_VALUE_TOKEN)
                 .query(DataQuery.of("commanditem"))
                 .id("commanditem")
+                .name("CommandItems Command")
+                .build();
+    }
+
+    @Listener
+    public void onRegister(GameRegistryEvent.Register<DataRegistration<?, ?>> event) {
+        DataRegistration.builder()
+                .dataClass(UsageData.class)
+                .immutableClass(UsageData.Immutable.class)
+                .builder(new UsageData.Builder())
+                .id("commanditem_data")
                 .name("CommandItems Command")
                 .build();
     }
