@@ -17,6 +17,15 @@ public class PokemonProvider {
         coordToStarter.put("-556 51 500", EnumSpecies.Bulbasaur);
         coordToStarter.put("-554 51 500", EnumSpecies.Squirtle);
         coordToStarter.put("-552 51 500", EnumSpecies.Charmander);
+        coordToStarter.put("-1287 48 555", EnumSpecies.Cyndaquil);
+        coordToStarter.put("-1284 48 555", EnumSpecies.Totodile);
+        coordToStarter.put("-1281 48 555", EnumSpecies.Chikorita);
+        coordToStarter.put("-4068 51 1551", EnumSpecies.Mudkip);
+        coordToStarter.put("-4068 51 1549", EnumSpecies.Torchic);
+        coordToStarter.put("-4068 51 1553", EnumSpecies.Treecko);
+        coordToStarter.put("703 32 -3218", EnumSpecies.Turtwig);
+        coordToStarter.put("699 32 -3218", EnumSpecies.Chimchar);
+        coordToStarter.put("701 32 -3218", EnumSpecies.Piplup);
     }
 
     public static Pokemon get(int x, int y, int z){
