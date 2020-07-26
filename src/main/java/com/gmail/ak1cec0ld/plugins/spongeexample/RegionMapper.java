@@ -10,8 +10,9 @@ public class RegionMapper {
 
         if(inside(x,z,-640,-493, 400, 566)) return "kanto";
         if(inside(x,z,-1339, -1188, 474, 650)) return "johto";
-        if(inside(x,z, -4119,-4043 ,1502 , 1601)) return "hoenn";
+        if(inside(x,z, -4119,-3943 ,1502 , 1601)) return "hoenn";
         if(inside(x,z, 535, 800, -3320, -3049)) return "sinnoh";
+        if(inside(x,z, -26, 26,125,175)) return "kantodojo";
 
         return null;
     }

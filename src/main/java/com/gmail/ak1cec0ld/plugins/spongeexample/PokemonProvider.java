@@ -26,6 +26,11 @@ public class PokemonProvider {
         coordToStarter.put("703 32 -3218", EnumSpecies.Turtwig);
         coordToStarter.put("699 32 -3218", EnumSpecies.Chimchar);
         coordToStarter.put("701 32 -3218", EnumSpecies.Piplup);
+        coordToStarter.put("-4031 69 1553", EnumSpecies.Mudkip);
+        coordToStarter.put("-4032 69 1552", EnumSpecies.Torchic);
+        coordToStarter.put("-4032 69 1551", EnumSpecies.Treecko);
+        coordToStarter.put("-4 57 152", EnumSpecies.Hitmonchan);
+        coordToStarter.put("-5 57 152", EnumSpecies.Hitmonlee);
     }
 
     public static Pokemon get(int x, int y, int z){

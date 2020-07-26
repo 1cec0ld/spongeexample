@@ -54,7 +54,7 @@ public class Interact {
                 (verifying.containsKey(spongePlayer.getUniqueId().toString()) &&
                         !verifying.get(spongePlayer.getUniqueId().toString()).equals(starter.getDisplayName()))){
             verifying.put(spongePlayer.getUniqueId().toString(), starter.getDisplayName());
-            spongePlayer.sendMessage(Text.of(TextColors.AQUA, TextStyles.ITALIC, "Are you sure you want to pick "+ starter.getDisplayName() +"? Click again."));
+            spongePlayer.sendMessage(Text.of(TextColors.AQUA, TextStyles.ITALIC, "Are you sure you want to pick "+ starter.getDisplayName() +"? Click again!"));
             return;
         }
         verifying.remove(spongePlayer.getUniqueId().toString());
@@ -73,7 +73,6 @@ public class Interact {
                         String finalCommandString = "";
                         finalCommandString = commandString.replace("distance=..","r=");
                         cmd.offer(Keys.COMMAND, finalCommandString);
-                        pl.getLogger().info(cmd.getCommandData().storedCommand().get());
                     }
                 }
             }
